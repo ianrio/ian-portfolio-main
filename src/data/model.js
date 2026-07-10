@@ -56,16 +56,16 @@ export const featuredRepoNames = [
 // Repos públicos que NO quieres mostrar en el grid de "Todos los repositorios":
 // Los nombres deben coincidir EXACTAMENTE con el nombre del repo en GitHub.
 export const excludedRepos = [
-  // 'prueba-acciparte1',
-  // 'prueba-acciparte2',
-  // 'ejercicio-slice',
-  // 'pruebago',
-  // 'cursotest',
-  // 'ob-curso-git',
-  // 'floppyproject',
-  // 'dice',
-  // 'card',
-  // 'cover-css',
+'prueba-acciparte1',
+'prueba-acciparte2',
+'ejercicio-slice',
+'pruebago',
+'cursotest',
+'ob-curso-git',
+'floppyproject',
+'dice',
+'card',
+'cover-css',
 ]
 
 // Se muestra si la API de GitHub no responde (rate-limit, offline, etc.)
