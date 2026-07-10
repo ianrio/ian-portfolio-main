@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { asset } from '../utils/asset'
 
-export default function useSelectSound(src = '/assets/sfx/select.mp3', volume = 0.45) {
+export default function useSelectSound(path = 'assets/sfx/select.mp3', volume = 0.45) {
   const audioRef = useRef(null)
   const [unlocked, setUnlocked] = useState(false)
 
   useEffect(() => {
-    const a = new Audio(src)
+    const a = new Audio(asset(path))
     a.preload = 'auto'
     a.volume = volume
     audioRef.current = a
@@ -18,7 +19,7 @@ export default function useSelectSound(src = '/assets/sfx/select.mp3', volume = 
       removeEventListener('pointerdown', unlock, { capture: true })
       removeEventListener('keydown', unlock, { capture: true })
     }
-  }, [src, volume])
+  }, [path, volume])
 
   const play = useCallback(() => {
     if (!unlocked) return

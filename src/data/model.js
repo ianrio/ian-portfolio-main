@@ -3,7 +3,7 @@
    Edita este archivo para cambiar proyectos, skills y perfil.
    ============================================================= */
 
-export const githubUser = 'https://github.com/ianrio'
+export const githubUser = 'ianrio'
 
 export const contactEmail = 'ian373@hotmail.com'
 

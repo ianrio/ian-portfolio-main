@@ -1,6 +1,7 @@
 import Ransom from '../Ransom'
 import { featured, featuredRepoNames, githubUser, langColors, projectImages } from '../../data/model'
 import useGithubRepos from '../../hooks/useGithubRepos'
+import { asset } from '../../utils/asset'
 
 function hash(str) {
   let h = 9
@@ -36,7 +37,7 @@ function FeaturedCard({ item, index }) {
   const style = { '--tilt': tilt, '--d': `${index * 70}ms`, '--lc': item.color }
   return (
     <a className="card feat" href={item.url} target="_blank" rel="noopener" style={style}>
-      <Thumb src={item.img} />
+      <Thumb src={asset(item.img)} />
       <span className="lang" style={{ '--lc': item.color }}>{item.tag}</span>
       <h3>
         {item.live ? <span className="live-dot" /> : null}
@@ -56,10 +57,10 @@ function RepoCard({ repo, index }) {
   const lc = langColors[repo.language] || '#e60012'
   const style = { '--tilt': tilt, '--d': `${index * 70}ms`, '--lc': lc }
   const pretty = repo.name.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
-  const img = projectImages[repo.name] || `/assets/projects/${repo.name}.png`
+  const img = projectImages[repo.name] || `assets/projects/${repo.name}.png`
   return (
     <a className="card" href={repo.html_url} target="_blank" rel="noopener" style={style}>
-      <Thumb src={img} />
+      <Thumb src={asset(img)} />
       <span className="lang">{repo.language || 'Repo'}</span>
       <h3>{splitTitle(pretty)}</h3>
       <p>{repo.description || 'Sin descripción, pero el código habla por sí mismo.'}</p>

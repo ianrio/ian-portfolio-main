@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Ransom from '../Ransom'
 import { contactEmail } from '../../data/model'
+import { asset } from '../../utils/asset'
 
 const CHIPS = [
   { href: `mailto:${contactEmail}`, label: 'Email ✉' },
   { href: 'https://www.linkedin.com/in/ianrio/', label: 'LinkedIn ↗' },
   { href: 'https://github.com/ianrio', label: 'GitHub ↗' },
-  { href: '/assets/cv/ian-cv.pdf', label: 'CV ⬇', download: 'ian-cv.pdf' },
+  { href: asset('assets/cv/ian-cv.pdf'), label: 'CV ⬇', download: 'ian-cv.pdf' },
 ]
 
 export default function Contact({ active, onBack, onSuccessSound }) {

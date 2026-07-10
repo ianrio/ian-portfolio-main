@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Ransom from '../Ransom'
+import { asset } from '../../utils/asset'
 
 export default function About({ active, onBack }) {
   const [photoOk, setPhotoOk] = useState(true)
@@ -17,8 +18,8 @@ export default function About({ active, onBack }) {
         {photoOk && (
           <figure className="about-photo">
             <img
-              src="/assets/me.jpg"
-              alt="Tu nombre"
+              src={asset('assets/me.jpg')}
+              alt="Ian Río Oliva"
               onError={() => setPhotoOk(false)}
             />
             <figcaption>Ian · Córdoba</figcaption>
@@ -58,7 +59,7 @@ export default function About({ active, onBack }) {
 
       <a
         className="cv-btn"
-        href="/assets/cv/ian-cv.pdf"
+        href={asset('assets/cv/ian-cv.pdf')}
         download="ian-cv.pdf"
       >
         <span>⬇ Descargar mi CV (PDF)</span>

@@ -1022,12 +1022,12 @@ body[data-screen]:not([data-screen="home"]) #hero-art {
   display: none;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url("/assets/cursors/normal.png");
+  background-image: url("./assets/cursors/normal.png");
   margin: -3px 0 0 -4px;
 }
 
 #cursor.link {
-  background-image: url("/assets/cursors/link.png");
+  background-image: url("./assets/cursors/link.png");
   margin: -6px 0 0 -6px;
 }
 

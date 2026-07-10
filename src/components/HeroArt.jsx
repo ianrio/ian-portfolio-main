@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { asset } from '../utils/asset'
 
 /**
  * Arte suelto (personaje / retrato) que aparece en el home.
@@ -10,7 +11,7 @@ export default function HeroArt() {
   return (
     <img
       id="hero-art"
-      src="/assets/hero.png"
+      src={asset('assets/hero.png')}
       alt=""
       onError={() => setOk(false)}
     />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../utils/asset'
 
 const menus = ['home', 'projects', 'skills', 'about', 'contact']
 
@@ -48,7 +49,7 @@ export default function Background() {
           key={name}
           className="menu-art"
           id={`art-${name}`}
-          src={`/assets/menus/${name}.jpg`}
+          src={asset(`assets/menus/${name}.jpg`)}
           alt=""
           onLoad={() => setLoadedArts((p) => ({ ...p, [name]: true }))}
           onError={(e) => {
