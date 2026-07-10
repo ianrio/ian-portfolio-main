@@ -1,7 +1,16 @@
 import Ransom from '../Ransom'
-import { featured, featuredRepoNames, githubUser, langColors, projectImages } from '../../data/model'
+import {
+  featured,
+  featuredRepoNames,
+  excludedRepos,
+  githubUser,
+  langColors,
+  projectImages,
+} from '../../data/model'
 import useGithubRepos from '../../hooks/useGithubRepos'
 import { asset } from '../../utils/asset'
+
+const HIDDEN_REPOS = [...featuredRepoNames, ...excludedRepos]
 
 function hash(str) {
   let h = 9
@@ -73,7 +82,7 @@ function RepoCard({ repo, index }) {
 }
 
 export default function Projects({ active, onBack, load }) {
-  const { repos, live, loaded } = useGithubRepos(githubUser, featuredRepoNames, load)
+  const { repos, live, loaded } = useGithubRepos(githubUser, HIDDEN_REPOS, load)
 
   let status = 'Contactando con GitHub…'
   if (loaded) {
