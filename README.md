@@ -2,9 +2,6 @@
 
 Portfolio personal estilo Persona 5, construido con **React + Vite**.
 
-Basado en el proyecto original de Meraj Rahman
-(`persona5-style-portfolio-main`), traducida a componentes React y hooks junto a cambios adicionales en estructura, contenidos y diseños.
-
 ## Estructura
 
 ```
@@ -41,6 +38,12 @@ ian-portfolio-main/
 │           ├── About.jsx
 │           └── Contact.jsx
 ```
+## Detalles
+
+Basado en el proyecto original de Meraj Rahman
+(`persona5-style-portfolio-main`), traducida a componentes React y hooks junto a cambios adicionales en estructura, contenidos y diseños.
+
+Todos los derechos a Atlus
 
 ## Requisitos
 
